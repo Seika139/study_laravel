@@ -15,6 +15,7 @@
   </head>
   <body>
     <h1>@yield('title')</h1>
+
     @section('menubar')
     <ul>
       <p class="menutitle">*menu</p>
