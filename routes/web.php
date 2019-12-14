@@ -36,3 +36,6 @@ Route::get('announcement','AnnouncementController@index');
 
 Route::get('announcement/find','AnnouncementController@find');
 Route::post('announcement/find','AnnouncementController@search');
+
+Route::get('announcement/add', 'AnnouncementController@add');
+Route::post('announcement/add','AnnouncementController@create');
