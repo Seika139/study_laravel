@@ -10,17 +10,8 @@
 
 @section('content')
   <p>This is a main part of this application.</p>
-  <p>You can write what you want.</p>
-
-  @component('components.message')
-    @slot('msg_title')
-    CAUTION!
-    @endslot
-
-    @slot('msg_content')
-    This is a message
-    @endslot
-  @endcomponent
+  <p>This is a link to <middleware>google.com</middleware>.</p>
+  <p>This is a link to <middleware>yahoo.co.jp</middleware>.</p>
 @endsection
 
 @section('footer')
