@@ -15,11 +15,11 @@
   </head>
   <body>
     <h1>@yield('title')</h1>
-    @session('menubar')
+
+    @section('menubar')
     <ul>
-      <p class="menutitle">
+      <p class="menutitle">*menu</p>
         <li>@show</li>
-      </p>
     </ul>
     <hr size="1">
     <div class="content">
