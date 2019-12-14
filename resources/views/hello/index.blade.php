@@ -1,6 +1,5 @@
 @extends('layouts.helloapp')
 
-
 @section('title','Index')
 
 @section('menubar')
@@ -14,8 +13,8 @@
     @foreach($items as $item)
       <tr>
         <td>{{$item->id}}</td>
-        <td>{{$item->writer_id}}</td>
         <td>{{$item->title}}</td>
+        <td>{{$item->announcement}}</td>
       </tr>
     @endforeach
   </table>
