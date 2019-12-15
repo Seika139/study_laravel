@@ -39,3 +39,9 @@ Route::post('announcement/find','AnnouncementController@search');
 
 Route::get('announcement/add', 'AnnouncementController@add');
 Route::post('announcement/add','AnnouncementController@create');
+
+Route::get('announcement/edit', 'AnnouncementController@edit');
+Route::post('announcement/edit','AnnouncementController@update');
+
+Route::get('announcement/del', 'AnnouncementController@delete');
+Route::post('announcement/del','AnnouncementController@remove');

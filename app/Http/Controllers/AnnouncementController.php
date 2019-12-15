@@ -36,4 +36,28 @@ class AnnouncementController extends Controller
     $announcement->fill($form)->save();
     return redirect('/announcement');
   }
+
+  public function edit(Request $request){
+    $announcement = Announcement::find($request->id);
+    return view('announcement.edit',['form'=>$announcement]);
+  }
+
+  public function update(Request $request){
+    $this->validate($request,Announcement::$rules);
+    $announcement = Announcement::find($request->id);
+    $form = $request->all();
+    unset($form['__token']);
+    $announcement->fill($form)->save();
+    return redirect('/announcement');
+  }
+
+  public function delete(Request $request){
+    $announcement = Announcement::find($request->id);
+    return view('announcement.del',['form'=>$announcement]);
+  }
+
+  public function remove(Request $request){
+    Announcement::find($request->id)->delete();
+    return redirect('/announcement');
+  }
 }

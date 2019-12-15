@@ -1,10 +1,10 @@
 @extends('layouts.helloapp')
 
-@section('title','Announcement.add')
+@section('title','Announcement.Edit')
 
 @section('menubar')
   @parent
-  create new
+  edit page
 @endsection
 
 @section('content')
@@ -18,8 +18,9 @@
   </div>
   @endif
   <table width="80%" cellspacing="1" cellpadding="10">
-    <form action="/announcement/add" method="post">
+    <form action="/announcement/edit" method="post">
       {{ csrf_field() }}
+      <input type="hidden" name="id" value="{{$form->id}}">
       <tr>
         <th width="20%">title: </th>
         <td width="400px">
@@ -39,9 +40,9 @@
         </td>
       </tr>
       <tr>
-        <th>created_by: </th>
+        <th>updated_by: </th>
         <td>
-          <input type="number" name="created_by" value="{{old('created_by')}}">
+          <input type="number" name="updated_by" value="{{old('updated_by')}}">
         </td>
       </tr>
       <tr>
